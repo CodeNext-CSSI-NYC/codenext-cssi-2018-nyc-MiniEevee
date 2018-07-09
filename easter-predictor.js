@@ -16,5 +16,5 @@ var m = (a + 11 * h + 22 * r) / 451;
 var n = (h + r - 7 * m + 114) / 31;
 var p = (h + r - 7 * m + 114) % 31;
 
-console.log("Month: " + n);
-console.log("Day: " + p + 1);
+console.log("Month: " + Math.round(n));
+console.log("Day: " + Math.round(p + 1));
