@@ -20,5 +20,4 @@ let n = Math.floor((h + r - 7 * m + 114) / 31);
 let p = (h + r - 7 * m + 114) % 31;
 let day = p + 1;
 let month = n;
-
 console.log("This year Easter is on " + month + "/" + day);
