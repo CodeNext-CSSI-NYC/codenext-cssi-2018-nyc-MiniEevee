@@ -1,8 +1,8 @@
 // Julia Yu
 
-let readline = require("readline-sync");
-let year = readline.question("Please enter a year after 1582: ");
-let y = year;
+// let readline = require("readline-sync");
+// let year = readline.question("Please enter a year after 1582: ");
+let y = Math.floor(Math.random() * 421);
 let a = y % 19;
 let b = Math.floor(y / 100);
 let c = y % 100;
@@ -20,4 +20,4 @@ let n = Math.floor((h + r - 7 * m + 114) / 31);
 let p = (h + r - 7 * m + 114) % 31;
 let day = p + 1;
 let month = n;
-console.log("This year Easter is on " + month + "/" + day);
+console.log("During " + (y + 1582) + ", Easter was on " + month + "/" + day);
