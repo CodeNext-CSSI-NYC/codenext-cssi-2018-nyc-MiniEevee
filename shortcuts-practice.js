@@ -15,8 +15,6 @@ let b = 18;
 console.log(b);
 console.log(b *= 2);
 console.log(b);
-console.log(b * 2);
-console.log(b);
 
 // 3. Predict the value of d. Then print it out to see if you were right.
 let c = 13;
