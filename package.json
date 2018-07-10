@@ -1,0 +1,22 @@
+{
+  "name": "codenext-cssi-2018-nyc-minieevee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "change-machine.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-MiniEevee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-MiniEevee/issues"
+  },
+  "homepage": "https://github.com/CodeNext-CSSI-NYC/codenext-cssi-2018-nyc-MiniEevee#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.9"
+  }
+}
