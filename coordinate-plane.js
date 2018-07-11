@@ -14,7 +14,7 @@ else{
   }
 
 if(midpoint.length == 3){
-  console.log("The midpoint is: " + "(" + parseInt((x1 + x2) / 2) + ", " + parseInt((y1 + y2) / 2)) + ")";
+  console.log("The midpoint is: " + "(" + (x1 + x2) / 2 + ", " + (y1 + y2) / 2 + ")");
 }
 else{
   console.log("Okay");
