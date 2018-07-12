@@ -6,7 +6,7 @@
 // console.log(makeAbba("What", "Up"), "→ WhatUpUpWhat");
 
 function makeAbba(a, b) {
-  return(a + b + b + a);
+  return (a + b + b + a);
 }
 
 // Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).
@@ -19,10 +19,9 @@ function makeAbba(a, b) {
 // → "hiHellohi"
 // → "baaab"
 function comboString(a, b) {
-  if(a.length > b.length){
+  if (a.length > b.length) {
     console.log(b + a + b);
-  }
-  else if(a.length < b.length) {
+  } else if (a.length < b.length) {
     console.log(a + b + a);
   }
 }
@@ -38,10 +37,9 @@ console.log(lastTwo("a"));
 // → "a"
 
 function lastTwo(str) {
-  if(str.length < 2) {
-    return(str);
-  }
-  else{
-    return(str.substring(0, str.length - 2) + str.substring(str.length - 1) + str.substring(str.length - 2, str.length - 1));
+  if (str.length < 2) {
+    return (str);
+  } else {
+    return (str.substring(0, str.length - 2) + str.substring(str.length - 1) + str.substring(str.length - 2, str.length - 1));
   }
 }

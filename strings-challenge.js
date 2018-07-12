@@ -14,7 +14,7 @@ withoutEnd("coding") → "odin"
 
 *******************************************************************************/
 function withoutEnd(str) {
-  return(str.slice(1, 5));
+  return (str.slice(1, 5));
 }
 
 // Uncomment the line below to test this function.
