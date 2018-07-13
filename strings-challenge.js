@@ -14,13 +14,11 @@ withoutEnd("coding") → "odin"
 
 *******************************************************************************/
 function withoutEnd(str) {
-  return (str.slice(1, 5));
+  return (str.slice(str.length - (str.length - 1), str.length - 1));
 }
 
 // Uncomment the line below to test this function.
-testWithoutEnd();
-
-
+// testWithoutEnd();
 
 
 /******************************************************************************

@@ -16,21 +16,19 @@
 // the numbers it is divisible by (from 1 up to itself).
 // Make sure to test this with several numbers (including some huge ones from fun).
 
-let divisor = 1;
 
-function factoring(num) {
-  while (num % 2 == 0 && divisor <= num) {
-    console.log(num / divisor);
-    divisor++;
-  }
-  while (num % 2 >= 1 && divisor <= num) {
-    console.log(num / divisor);
-    divisor++;
-  }
-}
 
-// factoring(8);
-// factoring(99);
+// function factoring(num) {
+//   for (let divisor = 1; divisor <= num; divisor++) {
+//     if (num % divisor == 0) {
+//       console.log(num / divisor);
+//     }
+//   }
+// }
+//
+// factoring(5);
+// console.log();
+// factoring(7);
 
 // 3. Print out all of the odd numbers between 300 and 350 (using a loop).
 
@@ -54,10 +52,9 @@ function containsSpace(str) {
 
 
 // 5. Given a string of any length, return the total number of times "a" or "A" appears.
+
 function countAs(str) {
-  if (str.includes("A") || str.includes("a")) {
-    return
-  }
+
 }
 // Some tests
 // console.log(countAs("happy") == 1);
@@ -76,7 +73,7 @@ function countAs(str) {
 
 // 7. Given a string of any length, return a new string that is a copy of that string in reverse.
 function reverseString(str) {
-
+  // return (str.substring(0, str.length - 2) + str.substring(str.length - 1) + str.substring(str.length - 2, str.length - 1));
 }
 // Some tests
 // console.log(reverseString("banana") == "ananab");
@@ -91,8 +88,20 @@ function reverseString(str) {
 // It should return either true or false.
 // Recall that a prime number is only divisible by itself and 1.
 function isPrime(num) {
+  // for (let divisor = 1; divisor <= num; divisor++) {
+  //   if (num % divisor) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
 }
+
+// console.log(isPrime(3));
+// console.log(isPrime(5));
+// console.log(isPrime(8));
+
 // Here are some tests -- add more
 // console.log(isPrime(89) == true);
 // console.log(isPrime(91) == false);

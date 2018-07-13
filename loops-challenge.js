@@ -47,18 +47,20 @@ hasb_b("b9b") → true
 hasb_b("bac") → false
 *******************************************************************************/
 
-console.log(hasb_b("abcbob"));
-console.log(hasb_b("b9b"));
-console.log(hasb_b("bac"));
+// console.log(hasb_b("abcbob"));
+// console.log(hasb_b("b9b"));
+// console.log(hasb_b("bac"));
 
-function hasb_b(string) {
-  if (string.includes("b_b")) {
+function hasb_b() {
+  if ("".includes("b" + "" + "b")) {
     return true;
+  } else {
+    return false;
   }
 }
 
 // Uncomment the line below to test this function.
-// testHasB_B();
+testHasB_B();
 
 function testHasB_B() {
   console.log();
