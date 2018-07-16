@@ -113,3 +113,17 @@ for (let i = 0; i < alphabet.length; i++) {
 // values from 1 to number - 1 and add together all the ones that are factors of
 // number. Return true if this sum is equal to number, false otherwise.
 // Make sure it returns true for 6 and 28 and false for pretty much anything else.
+
+function perfectNumbers(number) {
+  for (let i = 1; i < number - 1; i++) {
+    let factors = [];
+    for (let j = 1; j <= number; i++) {
+      if (number % j == 0) {
+        factors.push(i);
+      }
+    }
+    if (factors) {
+      factors.push(i);
+    }
+  }
+}
