@@ -93,11 +93,11 @@ let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 // Then, print out the toLowerCase() version of each letter.
 // You should see the alphabet, in lower case, with a new letter on each line.
 
-for (let i = 0; i < alphabet.length; i++) {
-  let letter = alphabet[i];
-  let small = letter.toLowerCase();
-  console.log(small);
-}
+// for (let i = 0; i < alphabet.length; i++) {
+//   let letter = alphabet[i];
+//   let small = letter.toLowerCase();
+//   console.log(small);
+// }
 
 
 // 7. Last time we listed out all of the factors of a number.

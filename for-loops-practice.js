@@ -39,7 +39,7 @@
 // 4. Write a function that, given a string of any length,
 // returns true if it contains at least one space.
 function containsSpace(str) {
-  if (str.includes("")) {
+  if (str.includes(" ")) {
     return true;
   }
 }
@@ -54,6 +54,15 @@ function containsSpace(str) {
 // 5. Given a string of any length, return the total number of times "a" or "A" appears.
 
 function countAs(str) {
+  let counter = 0;
+  for (let i = 0; i < str.length; i++) {
+    // let letter = str.charAt(i);
+    let letter = str[i];
+    if (letter == "A" || letter == "a") {
+      counter++;
+    }
+  }
+  return counter;
 
 }
 // Some tests
@@ -73,8 +82,12 @@ function countAs(str) {
 
 // 7. Given a string of any length, return a new string that is a copy of that string in reverse.
 function reverseString(str) {
-  // return (str.substring(0, str.length - 2) + str.substring(str.length - 1) + str.substring(str.length - 2, str.length - 1));
+  for (let i = 0; i < str; i++) {
+    let reverse = str[i];
+    reverse
+  }
 }
+
 // Some tests
 // console.log(reverseString("banana") == "ananab");
 // console.log(reverseString("Was it a car or a cat I saw?") == "?was I tac a ro rac a ti saW");

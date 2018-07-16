@@ -23,8 +23,10 @@ let readline = require("readline-sync");
 // If it contains an X, it should return false, because the game is not over.
 // If it contains no X's, it should return true, because the game is over.
 function isGameOver(tracker) {
-  if (tracker) {
-
+  if (tracker.includes("X")) {
+    return false
+  } else {
+    return true;
   }
 }
 
@@ -37,7 +39,12 @@ function isGameOver(tracker) {
 // and then adds a space to the new string.
 // After the loop is over, it prints out this string.
 function render(tracker) {
-  // Your code here
+  let str = "";
+  for (let i = 0; i < tracker.length; i++) {
+    let arrLook = tracker[i];
+    str = str + arrLook + " ";
+  }
+  console.log(str);
 }
 
 // This function returns a shuffled array of numbers, like [2, 3, 1, 3, 0, 2, 0, 1]
@@ -48,7 +55,12 @@ function render(tracker) {
 // The last line should be: return shuffle(arr)
 // This will shuffle and return the array.
 function shuffleCards(numMatches) {
-  // Your code here
+  let arr = [];
+  for (let j = 0; j < numMatches; j++) {
+    arr.push(j);
+    arr.push(j);
+  }
+  return shuffle(arr);
 }
 
 // This function returns an array like ["X", "X", "X", "X", "X", "X", "X", "X"]
@@ -61,7 +73,12 @@ function shuffleCards(numMatches) {
 // So if numMatches is 4, we will have 8 X's.
 // Return this array.
 function createTracker(numMatches) {
-  // Your code here
+  let arr2 = [];
+  for (let k = 0; k < numMatches; k++) {
+    arr2.push("X");
+    arr2.push("X");
+  }
+  return arr2;
 }
 
 // This function controls the whole game.
@@ -73,8 +90,7 @@ function createTracker(numMatches) {
 //   Ask the player for the first spot they want to flip over (an index in the array)
 //   Ask the player for the second spot they want to flip over (an index in the array)
 //   Store their guesses as index1 and index2
-//   Store the current values that are in the tracker array at index1 and index 2 in
-//     two variables called current1 and current2, in case we need to flip the cards back later.
+//   Store the current values that are in the tracker array at index1 and index 2 in two variables called current1 and current2, in case we need to flip the cards back later.
 //   Set tracker[index1] to answer[index1]. This means we are going to briefly reveal the card at that spot.
 //   Do the same with index2.
 //   Call console.clear() to stop showing cards from the previous round.
@@ -88,13 +104,29 @@ function createTracker(numMatches) {
 function play() {
   // This line controls how many pairs of numbers will be in the game.
   // I recommend starting with 4 pairs and trying bigger numbers later.
-  let numMatches = 4;
+  let numMatches = 3;
   // Don't change these next three lines.
   let answer = shuffleCards(numMatches);
   let tracker = createTracker(numMatches);
   let numGuesses = 0;
   console.clear();
-  // Your code here
+  while (isGameOver(tracker) != true) {
+    render(tracker);
+    numGuesses += 1;
+    let index1 = readline.question("Select the first spot to flip: ");
+    let index2 = readline.question("Select the second spot to flip: ");
+    let current1 = tracker[index1];
+    let current2 = tracker[index2];
+    tracker[index1] = answer[index1];
+    tracker[index2] = answer[index2];
+    console.clear();
+    render(tracker);
+    if ((tracker[index1] != tracker[index2]) || (index1 == index2)) {
+      tracker[index1] = current1;
+      tracker[index2] = current2;
+    }
+  }
+  console.log("It took " + numGuesses + " guesses to reveal all cards.");
 }
 
 function run() {

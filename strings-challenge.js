@@ -35,11 +35,13 @@ frontAgain("ed") → true
 
 *******************************************************************************/
 function frontAgain(str) {
-
+  if (str.charAt(str.length - 1) == str.charAt(str.length - str.length) && str.charAt(str.length) == str.charAt(str.length - 4)) {
+    return true;
+  }
 }
 
 // Uncomment the line below to test this function.
-// testFrontAgain();
+testFrontAgain();
 
 
 
