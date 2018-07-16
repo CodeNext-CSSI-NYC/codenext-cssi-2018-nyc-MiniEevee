@@ -161,15 +161,15 @@
 
 
 // 8. Make a new empty array.
-let readline = require("readline-sync");
-let array = [];
-let letters = readline.question("How many letters? ");
-for (i = 0; i < letters; i++) {
-  let letter = readline.question("Enter a letter: ");
-  array.push(letter);
-}
-let str = array.join("");
-console.log(str);
+// let readline = require("readline-sync");
+// let array = [];
+// let letters = readline.question("How many letters? ");
+// for (i = 0; i < letters; i++) {
+//   let letter = readline.question("Enter a letter: ");
+//   array.push(letter);
+// }
+// let str = array.join("");
+// console.log(str);
 // Ask the user how many letters they would like to type in.
 // Use a for loop to loop that many times.
 // Each time through the loop, ask the user to enter a letter. Add that letter to the array.
@@ -181,6 +181,16 @@ console.log(str);
 
 
 // 9. Make a new empty array.
+// let array = [];
+// var randomInt = require("random-int");
+// for (let i = 0; i <= 9; i++) {
+//   array.push(randomInt(0, 20));
+// }
+// // console.log(array);
+// for (let a = 0; a < array.length; a++) {
+//   let numberPrint = array[a];
+//   console.log(numberPrint);
+// }
 // Write a for loop that run ten times. Each time, it should add one random number to your array.
 // When that is done, create another for loop that goes throught this array and,
 // one at a time, prints out each item, so that you can see which items were added.
@@ -191,6 +201,35 @@ console.log(str);
 // 10. We will make a deck of cards -- sort of.
 // Create an empty array called deck.
 // Make a for loop that goes from 1 to 13.
+let deck = [];
+for (let i = 1; i < 14; i++) {
+  let str = "";
+  if (i > 1 && i < 11) {
+    str + i;
+  } else if (i == 1) {
+    str + "A";
+  } else if (i == 11) {
+    str + "J";
+  } else if (i == 12) {
+    str + "Q";
+  } else if (i == 13) {
+    str + "K";
+  }
+  for (let j = 1; j <= 4; j++) {
+    if (j == 1) {
+      str + "Clubs";
+    } else if (j == 2) {
+      str + "Diamonds";
+    } else if (j == 3) {
+      str + "Spades";
+    } else if (j == 4) {
+      str + "Hearts";
+    }
+  }
+  deck.push(str);
+  console.log(deck);
+}
+
 // Inside that for loop make another for loop that goes from 1 to 4.
 // Do NOT use i for both for loops! You can use j if you want.
 // Inside the inner for loop:
