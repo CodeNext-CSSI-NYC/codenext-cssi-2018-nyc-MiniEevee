@@ -22,9 +22,8 @@ function secondToLast(arr) {
   return anArray;
 }
 // Here is one test. Uncomment it when ready and try adding more.
-// console.log(secondToLast([3, 1, 4, 9, 2, 5]) == 2);
 console.log(secondToLast([3, 1, 4, 9, 2, 5]) == 2);
-
+console.log(secondToLast([14, 7, 22, 3, 8, 1]) == 7);
 
 // 3. Write a function that takes an array of numbers and returns an array that
 // contains only the smallest and largest values from the array. Hint: sort().
