@@ -15,7 +15,7 @@ let randomInt = require("random-int");
 let readline = require("readline-sync");
 
 let number = randomInt(1, 100);
-let guessCount = 0;
+let guessCount = 1;
 let guess = parseInt(readline.question("Guess a number ranging from 1 to 100 inclusive: "));
 
 while (guess != number) {
