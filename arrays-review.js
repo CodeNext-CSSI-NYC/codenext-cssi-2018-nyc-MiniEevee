@@ -201,35 +201,6 @@
 // 10. We will make a deck of cards -- sort of.
 // Create an empty array called deck.
 // Make a for loop that goes from 1 to 13.
-let deck = [];
-for (let i = 1; i < 14; i++) {
-  let str = "";
-  if (i > 1 && i < 11) {
-    str + i;
-  } else if (i == 1) {
-    str + "A";
-  } else if (i == 11) {
-    str + "J";
-  } else if (i == 12) {
-    str + "Q";
-  } else if (i == 13) {
-    str + "K";
-  }
-  for (let j = 1; j <= 4; j++) {
-    if (j == 1) {
-      str + "Clubs";
-    } else if (j == 2) {
-      str + "Diamonds";
-    } else if (j == 3) {
-      str + "Spades";
-    } else if (j == 4) {
-      str + "Hearts";
-    }
-  }
-  deck.push(str);
-  console.log(deck);
-}
-
 // Inside that for loop make another for loop that goes from 1 to 4.
 // Do NOT use i for both for loops! You can use j if you want.
 // Inside the inner for loop:
@@ -243,3 +214,33 @@ for (let i = 1; i < 14; i++) {
 // After both loops are done, print out both the length of the array (should be 52)
 // as well as the array itself, which should look like a deck of cards
 // Something like: ["Aclubs", "Adiamonds", "Aspades", "Ahearts", "2Clubs", "2Diamonds", ...]
+
+let deck = [];
+let str = "";
+for (let i = 1; i < 13; i++) {
+  if (i >= 2 || i <= 10) {
+    str = str + i;
+  } else if (i == 1) {
+    str = str + "A";
+  } else if (i == 11) {
+    str = str + "J";
+  } else if (i == 12) {
+    str = str + "Q";
+  } else if (i == 13) {
+    str = str + "K";
+  }
+  for (let j = 1; j < 4; j++) {
+    if (j == 1) {
+      str = str + "clubs";
+    } else if (j == 2) {
+      str = str + "diamonds";
+    } else if (j == 3) {
+      str = str + "spades";
+    } else if (j == 4) {
+      str = str + "hearts";
+    }
+    deck.push(str);
+  }
+}
+console.log(deck.length);
+// console.log(deck);
