@@ -12,8 +12,14 @@ const words = fs.readFileSync('words.txt').toString().split("\n");
 // 1. In the array above, find all words that are 12 letters long.
 // Specifically, add them all to a new array and then print out that array at the end.
 // (You shouldn't use an object to do this, it's a warm up.)
-
-
+let arr = [];
+for (let i = 0; i < words.length; i++) {
+  let word = words.sort();
+  if (word.sort(i) == 12) {
+    arr.push();
+  }
+}
+console.log(arr);
 
 // 2. Find all words that contain both x and z (or whatever fun combos you like).
 // Again, add them to a new array and print out that array at the end.

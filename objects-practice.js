@@ -116,7 +116,7 @@ function printKeysAndValues(obj) {
   let arr = Object.keys(obj);
   for (let i = 0; i < arr.length; i++) {
     let index = arr[i];
-    let number = arr.charAt();
+    let number = [i];
     console.log("The key " + index + " has a value of " + number);
   }
 }
