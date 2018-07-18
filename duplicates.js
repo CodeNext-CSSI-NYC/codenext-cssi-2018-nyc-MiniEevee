@@ -7,13 +7,23 @@
 
 // Get a basic version of this working. You should return true if there is at least one duplicated value.
 function hasDuplicate(arr) {
-
+  for (let i = 0; i < arr.length; i++) {
+    let arrayStuff = [arr[i]];
+    for (let j = 0; j < arr[i].length; j++) {
+      arrayStuff.push(arr);
+    }
+    if (arr.includes(arr[i])) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
 // Here are some examples you can use to test
 // let arr1 = [3,4,5,6,7,1,2,5,9];
 // let arr2 = ["apple", "banana", "pear", "banana"];
 // Also make some examples where the answer is false
-
+console.log(hasDuplicate([3, 4, 5, 6, 7, 1, 2, 5, 9]));
 
 
 // 2. Once you have this version working, make a different version that

@@ -105,20 +105,20 @@
 //  * *
 // *   *
 
-let rows = 5;
-for (let i = 0; i < rows; i++) {
-  let x = "";
-  for (let j = 0; j < rows; j++) {
-    if ((i == 0 && j == 0) || (i == 4 && j == 0)) {
-      x += "*   *";
-    } else if ((i == 1 && j == 0) || (i == 3 && j == 0)) {
-      x += " * * ";
-    } else if (i == 2 && j == 0) {
-      x += "  *  ";
-    }
-  }
-  console.log(x);
-}
+// let rows = 5;
+// for (let i = 0; i < rows; i++) {
+//   let x = "";
+//   for (let j = 0; j < rows; j++) {
+//     if ((i == 0 && j == 0) || (i == 4 && j == 0)) {
+//       x += "*   *";
+//     } else if ((i == 1 && j == 0) || (i == 3 && j == 0)) {
+//       x += " * * ";
+//     } else if (i == 2 && j == 0) {
+//       x += "  *  ";
+//     }
+//   }
+//   console.log(x);
+// }
 
 // (For the ones that follow, feel free to use something other than "X" and "-").
 // The characters that you draw don't matter, just the pattern they are in.
@@ -139,6 +139,15 @@ for (let i = 0; i < rows; i++) {
 // -X-X-X-X
 // X-X-X-X-
 // -X-X-X-X
+let row = 8;
+for (let i = 0; i < 8; i++) {
+  let line = "";
+  for (let j = 0; j < 8; j++) {
+    if () {
+      line += "X-X-X-X-"
+    }
+  }
+}
 
 
 
