@@ -19,7 +19,10 @@ for (let i = 1; i <= tableNum; i++) {
   }
   table.push(row);
 }
-// console.log(table);
+
+for (let k = 0; k < tableNum; k++) {
+  console.log(table[k]);
+}
 
 // Every time the outer loop runs, create a new array called row
 // Then, inside the inner loop, you should push the product of the two loop counters
@@ -39,9 +42,6 @@ for (let i = 1; i <= tableNum; i++) {
 // [ 3, 6, 9 ]
 // Try this with bigger numbers as well.
 
-for (let k = 0; k < tableNum; k++) {
-  console.log(table[k]);
-}
 
 // 3. Bonus improvements (much harder)
 // With double digit numbers, this doesn't look as nice:
@@ -49,6 +49,8 @@ for (let k = 0; k < tableNum; k++) {
 // [ 2, 4, 6, 8 ]
 // [ 3, 6, 9, 12 ]
 // [ 4, 8, 12, 16 ]
+
+
 
 // You could fix this by using nested loops to loop through each individual number
 // and adjust the spacing! This is actually quite hard. You need to convert each
