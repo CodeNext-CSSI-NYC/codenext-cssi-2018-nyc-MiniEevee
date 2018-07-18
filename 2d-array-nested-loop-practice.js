@@ -74,7 +74,13 @@ let interests = [
 // and other cases with fruits that are not.
 
 function findString(arr, str) {
-  if (arr.includes(str)) {
+  let arrayContents = [];
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      arrayContents.push(arr[i][j]);
+    }
+  }
+  if (arrayContents.includes(str)) {
     return true;
   } else {
     return false;
