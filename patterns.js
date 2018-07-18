@@ -139,17 +139,19 @@
 // -X-X-X-X
 // X-X-X-X-
 // -X-X-X-X
-let row = 8;
-for (let i = 0; i < 8; i++) {
-  let line = "";
-  for (let j = 0; j < 8; j++) {
-    if () {
-      line += "X-X-X-X-"
-    }
-  }
-}
 
-
+// let row = 8;
+// for (let i = 0; i < 8; i++) {
+//   let line = "";
+//   for (let j = 0; j < 8; j++) {
+//     if ((i == 0 || i == 2 || i == 4 || i == 6) && j == 0) {
+//       line += "X-X-X-X-";
+//     } else if ((i == 1 || i == 3 || i == 5 || i == 7) && j == 0) {
+//       line += "-X-X-X-X";
+//     }
+//   }
+//   console.log(line);
+// }
 
 // These last two are very hard.
 
@@ -164,7 +166,18 @@ for (let i = 0; i < 8; i++) {
 // X-X-X-X-X
 // XXXXXXXXX
 
-
+// let rows = 9;
+// for (let i = 0; i < rows; i++) {
+//   let grid = "";
+//   for (let j = 0; j < rows; j++) {
+//     if ((i == 0 || i == 2 || i == 4 || i == 6 || i == 8) && j == 0) {
+//       grid += "XXXXXXXXX";
+//     } else if ((i == 1 || i == 3 || i == 5 || i == 7) && j == 0) {
+//       grid += "X-X-X-X-X";
+//     }
+//   }
+//   console.log(grid);
+// }
 
 // 7. A pyramid!
 // Hint for this one... try printing stars straight down the middle first.
@@ -176,3 +189,19 @@ for (let i = 0; i < 8; i++) {
 //   *****
 //  *******
 // *********
+// i == rows (up -> down)
+// j == columns (left -> right)
+
+let height = 5;
+for (let i = 0; i < height; i++) {
+  let pyramid = "";
+  for (let j = 0; j < height; j++) {
+    if (j == 4) {
+      pyramid += "  *  ";
+    }
+    if ((j == 3 || j == 5) && i == 1) {
+      pyramid += " * * ";
+    }
+  }
+  console.log(pyramid);
+}

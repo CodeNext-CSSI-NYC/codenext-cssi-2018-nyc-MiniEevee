@@ -6,21 +6,20 @@
 // On that website, for example, they go up to 12.
 
 let readline = require("readline-sync");
-let tableNum = parseInt(readline.question("What do you want the table to go up to? "));
+let tableNum = parseInt(readline.question("What do you want the table multiply? "));
 
 // Create an empty array called table. To fill up table with all of the products:
 // Use two nested for loops that start at 1 and go up to whatever number the user typed in
 
 let table = [];
-for (let i = 1; i < tableNum; i++) {
-  for (let j = 1; j < tableNum[i]; j++) {
-    table.push(tableNum[i][j]);
+for (let i = 1; i <= tableNum; i++) {
+  let row = [];
+  for (let j = 1; j <= tableNum; j++) {
+    row.push(i * j);
   }
-  if (table[i] == table[j]) {
-    return true;
-  }
-  console.log(table);
+  table.push(row);
 }
+// console.log(table);
 
 // Every time the outer loop runs, create a new array called row
 // Then, inside the inner loop, you should push the product of the two loop counters
@@ -40,7 +39,9 @@ for (let i = 1; i < tableNum; i++) {
 // [ 3, 6, 9 ]
 // Try this with bigger numbers as well.
 
-
+for (let k = 0; k < tableNum; k++) {
+  console.log(table[k]);
+}
 
 // 3. Bonus improvements (much harder)
 // With double digit numbers, this doesn't look as nice:
