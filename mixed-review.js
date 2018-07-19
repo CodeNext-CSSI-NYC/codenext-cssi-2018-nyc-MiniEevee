@@ -158,9 +158,9 @@ function inWords(word) {
 // 8. Write a function that takes in a letter and returns an array of
 // all of the words that start and end with that letter.
 function startAndEndWith(letter) {
-  // if (words.indexOf(letter) == words.length || words.length - words.length) {
-  //
-  // }
+  if (words.indexOf(letter) == words.length || words.length - words.length) {
+
+  }
 }
 
 // These should all print true when you are done.
@@ -183,7 +183,7 @@ function factorial(num) {
   return factoring;
 }
 // These should all print true when you are done.
-console.log(factorial(5) == 120);
+// console.log(factorial(5) == 120);
 // console.log(factorial(1) == 1);
 
 
@@ -197,19 +197,39 @@ console.log(factorial(5) == 120);
 function fibonacci(num) {
   let arr = [0, 1]; // This is the starter array that you will add numbers to
   // For loop here
+  for (let i = 1; i <= num; i++) {
+    arr.push(arr[arr.length - 1] + arr[arr.length - 2]);
+  }
   return arr;
 }
 // These tests should print true when you are done
 // console.log(fibonacci(5).pop() == 8);
 // console.log(fibonacci(8).pop() == 34);
 
-
-
-
 // 11. Write a function that takes in an object called coins (see example below) and
 // returns the amount of money those coins represent in dollars.
 function countMoney(coins) {
+  let quarters;
+  let dimes;
+  let nickels;
+  let pennies;
 
+  let total = 0;
+
+  if (quarters >= 1) {
+    total += .25 * Object.values(coins[0]);
+  }
+  if (dimes >= 1) {
+    total += .1 * Object.values(coins[1]);
+  }
+  if (nickels >= 1) {
+    total += .05 * Object.values(coins[2]);
+  }
+  if (pennies >= 1) {
+    total += .01 * Object.values(coins[3]);
+  }
+
+  return total;
 }
 // Below is a test that calls this function with an object that four properties,
 // each representing how many coins I have.
@@ -219,10 +239,10 @@ let myCoins = {
   nickels: 4,
   pennies: 5
 };
+// let nums = Object.values(myCoins);
+
 // If your function is correct, this should print true.
-// console.log(countMoney(myCoins) == 1.05);
-
-
+console.log(countMoney(myCoins) == 1.05);
 
 // 12. Write a function that keep asking the user to type in a number and stops
 // as soon as they type in 24. Unlike the others, this function does not return anything.

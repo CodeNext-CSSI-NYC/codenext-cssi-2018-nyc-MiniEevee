@@ -29,7 +29,7 @@ function printChart(arr) {
   for (let sum = 2; sum <= 12; sum++) {
     printRow(results, sum);
   }
-  console.log(results);
+  // console.log(results);
 }
 
 // You don't need to edit this.
