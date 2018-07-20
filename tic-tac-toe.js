@@ -5,6 +5,10 @@
 // I reference something called null a lot below. null is a special term in JavaScript
 // that should be used without quotes. You can search online to read more about it.
 
+let readline = require("readline-sync");
+let whichCol;
+let whichRow;
+
 // This is a global variable that will be either "X" or "O"
 let player = "X";
 
@@ -88,11 +92,11 @@ function checkRows() {
   let secondRowResult = isTicTacToe(board[1][0], board[1][1], board[1][2]);
   let thirdRowResult = isTicTacToe(board[2][0], board[2][1], board[2][2]);
 
-  if (firstRowResult || secondRowResult || thirdRowResult == "X") {
+  if (firstRowResult == "X" || secondRowResult == "X" || thirdRowResult == "X") {
     return "X";
-  } else if (firstRowResult || secondRowResult || thirdRowResult == "O") {
+  } else if (firstRowResult == "O" || secondRowResult == "O" || thirdRowResult == "O") {
     return "O"
-  } else if (firstRowResult && secondRowResult && thirdRowResult == null) {
+  } else if ((firstRowResult == null) && (secondRowResult == null) && (thirdRowResult == null)) {
     return null;
   }
 }
@@ -106,11 +110,11 @@ function checkColumns() {
   let secondColResult = isTicTacToe(board[0][1], board[1][1], board[2][1]);
   let thirdColResult = isTicTacToe(board[0][2], board[1][2], board[2][2]);
 
-  if (firstColResult || secondColResult || thirdColResult == "X") {
+  if (firstColResult == "X" || secondColResult == "X" || thirdColResult == "X") {
     return "X";
-  } else if (firstColResult || secondColResult || thirdColResult == "O") {
+  } else if (firstColResult == "O" || secondColResult == "O" || thirdColResult == "O") {
     return "O"
-  } else if (firstColResult && secondColResult && thirdColResult == null) {
+  } else if ((firstColResult == null) && (secondColResult == null) && (thirdColResult == null)) {
     return null;
   }
 }
@@ -123,11 +127,11 @@ function checkDiagonals() {
   let firstDiagonal = isTicTacToe(board[0][0], board[1][1], board[2][2]);
   let secondDiagonal = isTicTacToe(board[0][2], board[1][1], board[2][0]);
 
-  if (firstDiagonal || secondDiagonal == "X") {
+  if (firstDiagonal == "X" || secondDiagonal == "X") {
     return "X";
-  } else if (firstDiagonal || secondDiagonal == "O") {
+  } else if (firstDiagonal == "O" || secondDiagonal == "O") {
     return "O"
-  } else if (firstDiagonal && secondDiagonal == null) {
+  } else if ((firstDiagonal == null) && (secondDiagonal == null)) {
     return null;
   }
 }
@@ -137,8 +141,12 @@ function checkDiagonals() {
 // This is used to identify tie games (when the board is full but there is no winner).
 function isBoardFull() {
   for (let a = 0; a < board.length; a++) {
-
+    let spots = board[a];
+    if (spots.includes("_")) {
+      return false;
+    }
   }
+  return true;
 }
 
 
@@ -157,10 +165,25 @@ function isBoardFull() {
 // (remember the player variable above is used to track whose turn it is)
 // and then call switchPlayer().
 // The while loop will then check if the game is over or not. null means that it is not.
-while (getWinner() == null) {
 
+function validMoves() {
+  if (((whichCol || whichRow) > 2) || ((whichCol || whichRow) < 0)) {
+    whichRow = readline.question("Enter a valid row number starting at 0: ");
+    whichCol = readline.question("Enter a valid column number starting at 0: ");
+  }
 }
 
+while (getWinner() == null) {
+  validMoves();
+  whichRow = readline.question("Enter a row number starting at 0: ");
+  whichCol = readline.question("Enter a column number starting at 0: ");
+  board[whichRow][whichCol] = player;
+  render();
+  switchPlayer();
+  console.log("It is " + player + "'s turn");
+}
+
+getWinner();
 // If your code gets to this point, that means the game is over.
 // You can figure out who won (or if it was a tie) by calling getWinner() again.
 // You should announce the outcome of the game.

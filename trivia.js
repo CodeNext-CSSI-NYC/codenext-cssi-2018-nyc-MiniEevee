@@ -22,106 +22,96 @@ let trivia10 = readline.question("Which planet size is approximately the same as
 let score = 0;
 let questionsAnswered = 0;
 
-if(trivia1 == "807"){
+if (trivia1 == "807") {
   console.log("Question 1: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 1: incorrect");
   questionsAnswered++;
 }
 
-if(trivia2 == "A FLAGPOLE"){
+if (trivia2 == "A FLAGPOLE") {
   console.log("Question 2: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 2: incorrect");
   questionsAnswered++;
 }
 
-if(trivia3 == "NINTENDO ENTERTAINMENT SYSTEM"){
+if (trivia3 == "NINTENDO ENTERTAINMENT SYSTEM") {
   console.log("Question 3: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 3: incorrect");
   questionsAnswered++;
 }
 
-if(trivia4 == "FALSE"){
+if (trivia4 == "FALSE") {
   console.log("Question 4: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 4: incorrect");
   questionsAnswered++;
 }
 
-if(trivia5 == "PERSONA 3"){
+if (trivia5 == "PERSONA 3") {
   console.log("Question 5: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 5: incorrect");
   questionsAnswered++;
 }
 
-if(trivia6 == "RED"){
+if (trivia6 == "RED") {
   console.log("Question 6: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 6: incorrect");
   questionsAnswered++;
 }
 
-if(trivia7 == "ALAKAZAM"){
+if (trivia7 == "ALAKAZAM") {
   console.log("Question 7: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 7: incorrect");
   questionsAnswered++;
 }
 
-if(trivia8 == "SUCCESS"){
+if (trivia8 == "SUCCESS") {
   console.log("Question 8: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 8: incorrect");
   questionsAnswered++;
 }
 
-if(trivia9 == "SUPER SMASH BROS ULTIMATE"){
+if (trivia9 == "SUPER SMASH BROS ULTIMATE") {
   console.log("Question 9: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 9: incorrect");
   questionsAnswered++;
 }
 
-if(trivia10 == "NEPTUNE"){
+if (trivia10 == "NEPTUNE") {
   console.log("Question 10: correct");
   score++;
   questionsAnswered++;
-}
-else{
+} else {
   console.log("Question 10: incorrect");
   questionsAnswered++;
 }
 
-if(questionsAnswered == 10){
+if (questionsAnswered == 10) {
   console.log("You answered " + score + " correctly out of a possible 10");
 }
